@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Welcome to Irundo</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
@@ -67,14 +67,14 @@
       width: 100%;
     }
 
-    .scroll-buttons {
+    .scroll-buttons, .upsell-buttons, .recommend-buttons {
       display: flex;
       overflow-x: auto;
       gap: 1rem;
-      padding-bottom: 0.5rem;
+      padding: 1rem 0;
     }
 
-    .scroll-buttons a {
+    .scroll-buttons a, .upsell-buttons a, .recommend-buttons a {
       min-width: 180px;
       flex: 0 0 auto;
       background-color: var(--light-gray);
@@ -85,6 +85,14 @@
       text-decoration: none;
       font-weight: 500;
       text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .scroll-buttons a img, .upsell-buttons a img, .recommend-buttons a img {
+      width: 20px;
+      height: 20px;
     }
 
     .subpage {
@@ -106,6 +114,30 @@
       text-decoration: none;
       margin: 0 0.5rem;
     }
+
+    .upsell-section h2,
+    .recommend-section h2 {
+      text-align: center;
+      color: var(--irundo-blue);
+      font-size: 1.2rem;
+    }
+
+    .whatsapp-chat {
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .whatsapp-chat a {
+      color: #25d366;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .btn-primary {
+        font-size: 0.95rem;
+        padding: 0.75rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -119,14 +151,15 @@
       <p class="stay-info">01.01 – 02.01.2026 | Adults: 2, Children: 0</p>
     </div>
 
-    <a class="btn-primary" href="https://sites.google.com/zigzag.hr/zd2/home-page" target="_blank">HOW TO ENTER APARTMENT</a>
+    <a class="btn-primary" href="https://irundo.com/apartman/noir-penthouse-zd2/" target="_blank">YOUR APARTMENT</a>
+    <a class="btn-primary" href="https://bit.ly/CheckininstructionsZD2" target="_blank">HOW TO ENTER APARTMENT</a>
 
     <div class="scroll-buttons">
       <a href="https://ci.book.rentl.io/c/3afe622d-7039-4a57-8039-c275fcc56566/17356" target="_blank">REGISTRATION FORM</a>
       <a href="#room-code" onclick="showSubpage('room-code')">ROOM CODE 🔑</a>
       <a href="https://sites.google.com/zigzag.hr/zd2/home-page/english/apartment-guide?authuser=0" target="_blank">APARTMENT INFO</a>
       <a href="https://irundozagreb.turneo.travel/" target="_blank">EXPLORE ZAGREB</a>
-      <a href="https://irundozagreb.turneo.travel/" target="_blank">AIRPORT TRANSFER</a>
+      <a href="https://irundozagreb.turneo.travel/experiences/01628713-4fb2-4961-ae09-514d0a6aeb66" target="_blank">AIRPORT TRANSFER</a>
       <a href="#departure" onclick="showSubpage('departure')">DEPARTURE INFO</a>
     </div>
 
@@ -141,6 +174,40 @@
     <div id="departure" class="subpage">
       <p>Checkout is until <strong>10:00 AM</strong>.<br>Need a little more time?</p>
       <a class="btn-primary" href="#">REQUEST LATE CHECK-OUT – 15€</a>
+    </div>
+
+    <div class="recommend-section">
+      <h2>Local Recommendations</h2>
+      <div class="recommend-buttons">
+        <a href="https://www.visit-zagreb.hr/zagreb/zrinjevac-park/" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/park.png" alt="Park" /> Parks & Nature
+        </a>
+        <a href="https://www.timeout.com/zagreb/things-to-do/best-restaurants-in-zagreb" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/restaurant.png" alt="Restaurant" /> Top Restaurants
+        </a>
+        <a href="https://www.visitzagreb.hr/zagreb/things-to-do/" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/city.png" alt="City" /> Things to Do
+        </a>
+        <a href="https://www.likealocalguide.com/zagreb" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/hidden.png" alt="Hidden" /> Local Hidden Gems
+        </a>
+      </div>
+    </div>
+
+    <div class="upsell-section">
+      <h2>Explore More Irundo Destinations</h2>
+      <div class="upsell-buttons">
+        <a href="https://irundo.com/en/destination/zagreb/" target="_blank">Stay in Zagreb</a>
+        <a href="https://irundo.com/en/destination/dubrovnik/" target="_blank">Stay in Dubrovnik</a>
+        <a href="https://irundo.com/en/destination/rovinj/" target="_blank">Stay in Rovinj</a>
+        <a href="https://irundo.com/en/destination/vienna/" target="_blank">Stay in Vienna</a>
+        <a href="https://irundo.com/en/destination/opatija/" target="_blank">Stay in Opatija</a>
+        <a href="https://irundo.com/en/destination/rijeka/" target="_blank">Stay in Rijeka</a>
+      </div>
+    </div>
+
+    <div class="whatsapp-chat">
+      <p>Need help? Chat with our team via <a href="https://wa.me/385919175600" target="_blank">WhatsApp</a> daily from <strong>9:00 AM to 9:00 PM</strong>.</p>
     </div>
 
     <div class="footer-links">
@@ -160,3 +227,4 @@
   </script>
 </body>
 </html>
+
