@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Irundo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --irundo-blue: #004A7C;
+      --light-gray: #f9f9f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      color: #333;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .logo {
+      max-width: 160px;
+      margin: 1rem auto 0;
+      display: block;
+    }
+
+    .hero {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .welcome-text {
+      text-align: center;
+    }
+
+    .welcome-text h1 {
+      color: var(--irundo-blue);
+      font-size: 1.4rem;
+    }
+
+    .stay-info {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .btn-primary {
+      display: block;
+      background-color: var(--irundo-blue);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      margin: 0.5rem auto;
+      width: 100%;
+    }
+
+    .scroll-buttons {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .scroll-buttons a {
+      min-width: 180px;
+      flex: 0 0 auto;
+      background-color: var(--light-gray);
+      border: 2px solid var(--irundo-blue);
+      color: var(--irundo-blue);
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .subpage {
+      display: none;
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+    }
+
+    .footer-links {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .footer-links a {
+      color: var(--irundo-blue);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/mnt/data/f096ff1f-9e19-4ff8-9f54-96399260660d.png" alt="Irundo Logo" class="logo" />
+
+    <img class="hero" src="https://irundo.com/wp-content/uploads/2025/01/noir_1_hero_photo-scaled-1.jpg" alt="Noir Penthouse" />
+
+    <div class="welcome-text">
+      <h1>Welcome Tomo Pajser!</h1>
+      <p class="stay-info">01.01 – 02.01.2026 | Adults: 2, Children: 0</p>
+    </div>
+
+    <a class="btn-primary" href="https://sites.google.com/zigzag.hr/zd2/home-page" target="_blank">HOW TO ENTER APARTMENT</a>
+
+    <div class="scroll-buttons">
+      <a href="https://ci.book.rentl.io/c/3afe622d-7039-4a57-8039-c275fcc56566/17356" target="_blank">REGISTRATION FORM</a>
+      <a href="#room-code" onclick="showSubpage('room-code')">ROOM CODE 🔑</a>
+      <a href="https://sites.google.com/zigzag.hr/zd2/home-page/english/apartment-guide?authuser=0" target="_blank">APARTMENT INFO</a>
+      <a href="https://irundozagreb.turneo.travel/" target="_blank">EXPLORE ZAGREB</a>
+      <a href="https://irundozagreb.turneo.travel/" target="_blank">AIRPORT TRANSFER</a>
+      <a href="#departure" onclick="showSubpage('departure')">DEPARTURE INFO</a>
+    </div>
+
+    <!-- Subpage: Room Code -->
+    <div id="room-code" class="subpage">
+      <p><strong>PLEASE FILL OUT THE REGISTRATION FORM</strong> in order to receive your codes. <br><br>
+      Please note: if the apartment is still being cleaned, you will need to wait until <strong>15:00h</strong> to receive the code.</p>
+      <a class="btn-primary" href="#">REQUEST EARLY CHECK-IN – 15€</a>
+    </div>
+
+    <!-- Subpage: Departure Info -->
+    <div id="departure" class="subpage">
+      <p>Checkout is until <strong>10:00 AM</strong>.<br>Need a little more time?</p>
+      <a class="btn-primary" href="#">REQUEST LATE CHECK-OUT – 15€</a>
+    </div>
+
+    <div class="footer-links">
+      <p>
+        <a href="https://sites.google.com/zigzag.hr/faq/faq" target="_blank">FAQ</a> | 
+        <a href="https://irundozagreb.turneo.travel/" target="_blank">Travel Guide</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showSubpage(id) {
+      document.querySelectorAll('.subpage').forEach(page => page.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      window.scrollTo({ top: document.getElementById(id).offsetTop - 20, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
